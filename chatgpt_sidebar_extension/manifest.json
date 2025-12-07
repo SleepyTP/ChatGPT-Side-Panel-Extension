@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Sidebar",
+  "version": "1.0",
+  "description": "Open ChatGPT in Chrome side panel.",
+  "permissions": [
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
