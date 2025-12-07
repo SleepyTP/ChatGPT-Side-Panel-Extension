@@ -1,0 +1,45 @@
+
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Sidebar Screenshot (Final)",
+  "description": "Region screenshot + clipboard + ChatGPT sidebar (stable)",
+  "version": "3.0",
+  "permissions": [
+    "sidePanel",
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_title": "ChatGPT Screenshot Sidebar",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "screenshot-region": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Region screenshot"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["region.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
